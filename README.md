@@ -1,0 +1,2 @@
+# idle
+An idle game.
