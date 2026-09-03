@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bnvprarerddsl"]
+
+[ext_resource type="PackedScene" uid="uid://0osk1h3ieeuu" path="res://scenes/prototypes/generators/prototype_generator.tscn" id="1_s3ma4"]
+
+[node name="UserInterface" type="Control" unique_id=1675217294]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1193357114]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainView" type="Control" parent="HBoxContainer" unique_id=702833752]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PrototypeGenerator" parent="HBoxContainer/MainView" unique_id=424499378 instance=ExtResource("1_s3ma4")]
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=717885067]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 16
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/MarginContainer" unique_id=246043358]
+layout_mode = 2
+
+[node name="RightPanel" type="Control" parent="HBoxContainer" unique_id=1294429995]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanel" unique_id=1527601628]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Navigator" type="Control" parent="HBoxContainer/RightPanel/VBoxContainer" unique_id=788173141]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RightPanel/VBoxContainer/Navigator" unique_id=1007283334]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanel/VBoxContainer/Navigator/MarginContainer" unique_id=410583298]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="HBoxContainer/RightPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer" unique_id=1021066370]
+layout_mode = 2
+text = "Prototype Generator"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RightPanel/VBoxContainer" unique_id=2085970837]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/RightPanel/VBoxContainer/MarginContainer" unique_id=678350114]
+layout_mode = 2
+
+[node name="Resources" type="Control" parent="HBoxContainer/RightPanel/VBoxContainer" unique_id=1782731762]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RightPanel/VBoxContainer/Resources" unique_id=679852428]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanel/VBoxContainer/Resources/MarginContainer" unique_id=176921630]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/RightPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=1450418205]
+layout_mode = 2
+text = "Sunlight: 0"

@@ -36,5 +36,6 @@ func _on_button_pressed() -> void:
 	begin_generating_sunlight()
 
 
+## triggers when timer times out; and then timer will start back up at set interval via inspector
 func _on_timer_timeout() -> void:
 	create_sunlight()
