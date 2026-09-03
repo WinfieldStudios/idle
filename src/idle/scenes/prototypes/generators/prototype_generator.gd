@@ -1,14 +1,15 @@
-class_name PrototypeClicker
+class_name PrototypeGenerator
 extends Control
-## A Clicker Prototype
+## A Generator Prototype
 
 
 @export var label : Label
+@export var button : Button
+@export var timer : Timer
 
 var sunlight : int = 0
 
 
-## Underscore functions are called from outside this script
 func _ready() -> void:
 	update_label_text()
 
@@ -22,8 +23,18 @@ func create_sunlight() -> void:
 ## Updates the UI to display the user's sunlight count
 func update_label_text() -> void:
 	label.text = "Sunlight: %s" %sunlight
+	
+
+## I used Search Help (top right) to learn how the timer works
+func begin_generating_sunlight() -> void:
+	timer.start()
+	button.disabled = true
 
 
-## When the func name starts with an underscore, then it gets called from a signal
+## "signal up, call down"
 func _on_button_pressed() -> void:
+	begin_generating_sunlight()
+
+
+func _on_timer_timeout() -> void:
 	create_sunlight()
