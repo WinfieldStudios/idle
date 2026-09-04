@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bncm4a74lexxb"]
+
+[ext_resource type="PackedScene" uid="uid://qh68p8mb8xck" path="res://scenes/practice/dude.tscn" id="1_ei56l"]
+
+[node name="Control" type="Control" unique_id=354304083]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1291398029]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 1, 1, 1)
+
+[node name="Node2D" parent="." unique_id=1324835592 instance=ExtResource("1_ei56l")]
+position = Vector2(772, 875)
