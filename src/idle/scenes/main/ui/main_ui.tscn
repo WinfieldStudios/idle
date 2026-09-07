@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://diy14gsbra5g7"]
+
+[ext_resource type="Texture2D" uid="uid://c8jlqcenegoh3" path="res://images/icons/icon.svg" id="1_yf13x"]
+[ext_resource type="PackedScene" uid="uid://4xpsqr4idnwk" path="res://scenes/main/ui/resources_ui.tscn" id="2_wt2oo"]
+
+[sub_resource type="Theme" id="Theme_hufm4"]
+
+[node name="main_ui" type="Control" unique_id=550820479]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1619071501]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PondView" type="Control" parent="HBoxContainer" unique_id=1185230820]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="HBoxContainer/PondView" unique_id=1850461655]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="Sprite2D" parent="HBoxContainer/PondView/Control" unique_id=1062439306]
+scale = Vector2(5, 5)
+texture = ExtResource("1_yf13x")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1906774824]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 16
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/MarginContainer" unique_id=2083847174]
+layout_mode = 2
+
+[node name="MenuView" type="Control" parent="HBoxContainer" unique_id=1561209670]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MenuView" unique_id=373251754]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menus" type="Control" parent="HBoxContainer/MenuView/HBoxContainer" unique_id=1582461502]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MenuView/HBoxContainer/Menus" unique_id=1914593283]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resources" type="Control" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer" unique_id=645058272]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ResourcesUI" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources" unique_id=1844071280 instance=ExtResource("2_wt2oo")]
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer" unique_id=2107868893]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 0
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/MarginContainer" unique_id=1310992606]
+layout_mode = 2
+
+[node name="SpellTabs" type="Control" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer" unique_id=162372212]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs" unique_id=1612348767]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer" unique_id=41388218]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control" unique_id=1970395314]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Button" type="Button" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control/MarginContainer" unique_id=1818293880]
+layout_mode = 2
+text = "BIOTICS"
+
+[node name="Control2" type="Control" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer" unique_id=1817762736]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control2" unique_id=1206104571]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[node name="Button" type="Button" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control2/MarginContainer" unique_id=772950739]
+layout_mode = 2
+text = "STATICS"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MenuView/HBoxContainer" unique_id=2093674761]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 320
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/MenuView/HBoxContainer/MarginContainer" unique_id=1926148392]
+layout_mode = 2
+
+[node name="Spells" type="Control" parent="HBoxContainer/MenuView/HBoxContainer" unique_id=581562727]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/MenuView/HBoxContainer/Spells" unique_id=295643593]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_hufm4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MenuView/HBoxContainer/Spells/ScrollContainer" unique_id=2022612631]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MenuView/HBoxContainer/Spells/ScrollContainer/VBoxContainer" unique_id=1229780551]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+
+[node name="Label" type="Label" parent="HBoxContainer/MenuView/HBoxContainer/Spells/ScrollContainer/VBoxContainer/MarginContainer" unique_id=1112806890]
+layout_mode = 2
+text = "Scroll Bar of Spells"
+horizontal_alignment = 1
+vertical_alignment = 1

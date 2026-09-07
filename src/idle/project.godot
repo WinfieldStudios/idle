@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="idle"
-run/main_scene="uid://bnvprarerddsl"
+run/main_scene="uid://diy14gsbra5g7"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://images/icons/icon.svg"
 
 [debug]
 
@@ -34,8 +34,10 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
-"res://scenes/": "blue",
-"res://scripts/": "red"
+"res://audio/": "blue",
+"res://images/": "red",
+"res://scenes/": "yellow",
+"res://scripts/": "green"
 }
 
 [filesystem]

@@ -1,0 +1,565 @@
+[gd_scene format=3 uid="uid://4xpsqr4idnwk"]
+
+[ext_resource type="Script" uid="uid://bplss4kcv2d5h" path="res://scenes/main/ui/resources_ui.gd" id="1_bewq2"]
+[ext_resource type="Texture2D" uid="uid://daxycrctaveog" path="res://images/icons/arcana.png" id="1_ut5qv"]
+[ext_resource type="Texture2D" uid="uid://b2guqfmyshrbi" path="res://images/icons/sun.png" id="2_xmyee"]
+[ext_resource type="Texture2D" uid="uid://uxnc3dj547vh" path="res://images/icons/oxygen.png" id="3_bewq2"]
+[ext_resource type="Texture2D" uid="uid://c5hnjar41yvam" path="res://images/icons/moon.png" id="4_nagar"]
+[ext_resource type="Texture2D" uid="uid://c4jlhikaffmmj" path="res://images/icons/detritus.png" id="5_b2m0v"]
+
+[node name="ResourcesUI" type="Control" unique_id=1844071280 node_paths=PackedStringArray("timerStandard", "timerFast", "timerSlow", "arcanaCountLabel", "sunlightCountLabel", "nitrogenCountLabel", "co2CountLabel", "oxygenCountLabel", "detritusCountLabel", "foodCountLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bewq2")
+timerStandard = NodePath("TimerStandard")
+timerFast = NodePath("TimerFast")
+timerSlow = NodePath("TimerSlow")
+arcanaCountLabel = NodePath("MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer/MarginContainer2/Count")
+sunlightCountLabel = NodePath("MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer/MarginContainer2/Count")
+nitrogenCountLabel = NodePath("MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer/MarginContainer2/Count")
+co2CountLabel = NodePath("MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/MarginContainer2/Count")
+oxygenCountLabel = NodePath("MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer/MarginContainer2/Count")
+detritusCountLabel = NodePath("MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer/MarginContainer2/Count")
+foodCountLabel = NodePath("MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer/MarginContainer2/Count")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1285965466]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=26653959]
+layout_mode = 2
+
+[node name="Arcana" type="Control" parent="MarginContainer/VBoxContainer" unique_id=320221079]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Arcana" unique_id=1880854327]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Arcana/MarginContainer" unique_id=309743708]
+layout_mode = 2
+
+[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer" unique_id=1293653033]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer/Icon" unique_id=1986488276]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Arcana" type="Sprite2D" parent="MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer/Icon/Control" unique_id=1886430155]
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("1_ut5qv")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer" unique_id=194989998]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer/MarginContainer" unique_id=193960231]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Arcana"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer" unique_id=1709819619]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer/MarginContainer2" unique_id=696417222]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Sunlight" type="Control" parent="MarginContainer/VBoxContainer" unique_id=948301402]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Sunlight" unique_id=574799301]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Sunlight/MarginContainer" unique_id=451954200]
+layout_mode = 2
+
+[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer" unique_id=1901150653]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer/Icon" unique_id=1438477282]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sun" type="Sprite2D" parent="MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer/Icon/Control" unique_id=1008024651]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_xmyee")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer" unique_id=622459224]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer/MarginContainer" unique_id=686120574]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Sunlight"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer" unique_id=1486187621]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer/MarginContainer2" unique_id=926314899]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Nitrogen" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1177899490]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Nitrogen" unique_id=373818193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer" unique_id=793766881]
+layout_mode = 2
+
+[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer" unique_id=715183880]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer/Icon" unique_id=1760228302]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nitrogen" type="Sprite2D" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer/Icon/Control" unique_id=1606666316]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_nagar")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer" unique_id=757785014]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer/MarginContainer" unique_id=716576759]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Nitrogen"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer" unique_id=405889903]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer/MarginContainer2" unique_id=300464189]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CO2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=52549002]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/CO2" unique_id=922588720]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CO2/MarginContainer" unique_id=976432511]
+layout_mode = 2
+
+[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer" unique_id=753933672]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/Icon" unique_id=661180134]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CO2" type="Sprite2D" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/Icon/Control" unique_id=1277305510]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_bewq2")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer" unique_id=661601511]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/MarginContainer" unique_id=421558318]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "CO2"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer" unique_id=1811765267]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/MarginContainer2" unique_id=649766516]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Oxygen" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1108332407]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Oxygen" unique_id=5294993]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Oxygen/MarginContainer" unique_id=1319312939]
+layout_mode = 2
+
+[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer" unique_id=1398339409]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer/Icon" unique_id=950792617]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Oxygen" type="Sprite2D" parent="MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer/Icon/Control" unique_id=1921411292]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_bewq2")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer" unique_id=1729145425]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer/MarginContainer" unique_id=1480542789]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Oxygen"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer" unique_id=476599061]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer/MarginContainer2" unique_id=484631902]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Detritus" type="Control" parent="MarginContainer/VBoxContainer" unique_id=324882322]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Detritus" unique_id=697116950]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Detritus/MarginContainer" unique_id=1974805270]
+layout_mode = 2
+
+[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer" unique_id=2082650335]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer/Icon" unique_id=859086692]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Detritus" type="Sprite2D" parent="MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer/Icon/Control" unique_id=1400111585]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_b2m0v")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer" unique_id=340741867]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer/MarginContainer" unique_id=985104863]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Detritus"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer" unique_id=1695004330]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer/MarginContainer2" unique_id=1838950608]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Food" type="Control" parent="MarginContainer/VBoxContainer" unique_id=758930626]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Food" unique_id=62355782]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Food/MarginContainer" unique_id=843876140]
+layout_mode = 2
+
+[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer" unique_id=428708722]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer/Icon" unique_id=1118732401]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Food" type="Sprite2D" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer/Icon/Control" unique_id=1651066941]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_b2m0v")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer" unique_id=1557565541]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer/MarginContainer" unique_id=2129625407]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Food"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer" unique_id=1820992485]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer/MarginContainer2" unique_id=332636184]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TimerStandard" type="Timer" parent="." unique_id=2085774951]
+wait_time = 6.0
+
+[node name="TimerFast" type="Timer" parent="." unique_id=1314693701]
+
+[node name="TimerSlow" type="Timer" parent="." unique_id=620459880]
+wait_time = 60.0
+
+[connection signal="timeout" from="TimerStandard" to="." method="_on_timer_standard_timeout"]
+[connection signal="timeout" from="TimerFast" to="." method="_on_timer_fast_timeout"]
+[connection signal="timeout" from="TimerSlow" to="." method="_on_timer_slow_timeout"]
