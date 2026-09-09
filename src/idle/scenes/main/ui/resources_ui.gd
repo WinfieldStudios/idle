@@ -44,7 +44,13 @@ var foodDelta : int = 0
 @export var foodCountLabel : Label
 
 
-signal twig_purchased
+signal algae_purchased
+signal mold_purchased
+signal critters_purchased
+
+signal twigs_purchased
+signal pebbles_purchased
+signal lights_purchased
 
 
 func _ready() -> void:
@@ -113,12 +119,71 @@ func _on_timer_slow_timeout() -> void:
 	generate_arcana()
 
 
-func _on_natures_ui_twigs_button_pressed() -> void:
-	if arcana >= 1:
-		arcana -= 1
+func _on_natures_ui_twigs_button_pressed(cost) -> void:
+	if arcana >= cost:
+		arcana -= cost
 		detritusDelta += 1
 		update_arcana_count_label()
-		twig_purchased.emit()
+		twigs_purchased.emit()
 	else:
 		pass
-	
+
+
+func _on_natures_ui_pebbles_button_pressed(cost) -> void:
+	if arcana >= cost:
+		arcana -= cost
+		nitrogenDelta += 1
+		update_arcana_count_label()
+		pebbles_purchased.emit()
+	else:
+		pass
+
+
+func _on_natures_ui_lights_button_pressed(cost) -> void:
+	if arcana >= cost:
+		arcana -= cost
+		sunlightDelta += 1
+		update_arcana_count_label()
+		lights_purchased.emit()
+	else:
+		pass
+
+
+func _on_biotics_ui_algae_button_pressed(cost) -> void:
+	if arcana >= cost:
+		arcana -= cost
+		sunlightDelta -= 1
+		nitrogenDelta -= 1
+		co2Delta -= 1
+		oxygenDelta += 1
+		foodDelta += 1
+		update_arcana_count_label()
+		algae_purchased.emit()
+	else:
+		pass
+
+
+func _on_biotics_ui_mold_button_pressed(cost) -> void:
+	if arcana >= cost:
+		arcana -= cost
+		detritusDelta -= 1
+		oxygenDelta -= 1
+		co2Delta += 1
+		nitrogenDelta += 1
+		update_arcana_count_label()
+		mold_purchased.emit()
+	else:
+		pass
+
+
+func _on_biotics_ui_critters_button_pressed(cost) -> void:
+	if arcana >= cost:
+		arcana -= cost
+		foodDelta -= 1
+		oxygenDelta -= 1
+		co2Delta += 1
+		detritusDelta += 1
+		update_arcana_count_label()
+		critters_purchased.emit()
+	else:
+		pass

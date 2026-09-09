@@ -183,7 +183,17 @@ position = Vector2(0.49995595, 2.3126602e-05)
 scale = Vector2(0.47916663, 0.8388889)
 texture = ExtResource("1_3bqjm")
 
-[connection signal="twig_purchased" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" to="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" method="_on_resources_ui_twig_purchased"]
+[connection signal="algae_purchased" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" to="HBoxContainer/MenuView/HBoxContainer/Spells/BioticsUI" method="_on_resources_ui_algae_purchased"]
+[connection signal="critters_purchased" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" to="HBoxContainer/MenuView/HBoxContainer/Spells/BioticsUI" method="_on_resources_ui_critters_purchased"]
+[connection signal="lights_purchased" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" to="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" method="_on_resources_ui_lights_purchased"]
+[connection signal="mold_purchased" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" to="HBoxContainer/MenuView/HBoxContainer/Spells/BioticsUI" method="_on_resources_ui_mold_purchased"]
+[connection signal="pebbles_purchased" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" to="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" method="_on_resources_ui_pebbles_purchased"]
+[connection signal="twigs_purchased" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" to="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" method="_on_resources_ui_twigs_purchased"]
 [connection signal="pressed" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control/MarginContainer/BioticsButton" to="HBoxContainer/MenuView/HBoxContainer/Spells" method="_on_biotics_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control2/MarginContainer/NaturesButton" to="HBoxContainer/MenuView/HBoxContainer/Spells" method="_on_natures_button_pressed"]
+[connection signal="algae_button_pressed" from="HBoxContainer/MenuView/HBoxContainer/Spells/BioticsUI" to="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" method="_on_biotics_ui_algae_button_pressed"]
+[connection signal="critters_button_pressed" from="HBoxContainer/MenuView/HBoxContainer/Spells/BioticsUI" to="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" method="_on_biotics_ui_critters_button_pressed"]
+[connection signal="mold_button_pressed" from="HBoxContainer/MenuView/HBoxContainer/Spells/BioticsUI" to="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" method="_on_biotics_ui_mold_button_pressed"]
+[connection signal="lights_button_pressed" from="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" to="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" method="_on_natures_ui_lights_button_pressed"]
+[connection signal="pebbles_button_pressed" from="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" to="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" method="_on_natures_ui_pebbles_button_pressed"]
 [connection signal="twigs_button_pressed" from="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" to="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" method="_on_natures_ui_twigs_button_pressed"]
