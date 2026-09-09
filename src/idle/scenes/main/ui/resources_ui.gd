@@ -2,48 +2,56 @@ class_name ResourceGenerator
 extends Control
 
 
+var STARTING_AMOUNT : int = 10
+
 @export var timerStandard : Timer
 @export var timerFast : Timer
 @export var timerSlow : Timer
 
 ## SLOW TIMER
-var arcana : int = 0
+var arcana : int = STARTING_AMOUNT
 var arcanaDelta : int = 1
 @export var arcanaCountLabel : Label
 
 ## FAST TIMER
-var sunlight : int = 0
+var sunlight : int = STARTING_AMOUNT
 var sunlightDelta : int = 1
 @export var sunlightCountLabel : Label
 
 ## STANDARD TIMER
-var nitrogen : int = 0
+var nitrogen : int = STARTING_AMOUNT
 var nitrogenDelta : int = 0
 @export var nitrogenCountLabel : Label
 
 ## STANDARD TIMER
-var co2 : int = 0
+var co2 : int = STARTING_AMOUNT
 var co2Delta : int = 0
 @export var co2CountLabel : Label
 
 ## STANDARD TIMER
-var oxygen : int = 0
+var oxygen : int = STARTING_AMOUNT
 var oxygenDelta : int = 0
 @export var oxygenCountLabel : Label
 
 ## STANDARD TIMER
-var detritus : int = 0
+var detritus : int = STARTING_AMOUNT
 var detritusDelta : int = 0
 @export var detritusCountLabel : Label
 
 ## STANDARD TIMER
-var food : int = 0
+var food : int = STARTING_AMOUNT
 var foodDelta : int = 0
 @export var foodCountLabel : Label
 
 
+signal twig_purchased
+
+
 func _ready() -> void:
 	start_timers()
+	update_resource_count_labels()
+	update_sunlight_count_label()
+	update_arcana_count_label()
 	
 
 func start_timers() -> void:
@@ -103,3 +111,14 @@ func _on_timer_fast_timeout() -> void:
 
 func _on_timer_slow_timeout() -> void:
 	generate_arcana()
+
+
+func _on_natures_ui_twigs_button_pressed() -> void:
+	if arcana >= 1:
+		arcana -= 1
+		detritusDelta += 1
+		update_arcana_count_label()
+		twig_purchased.emit()
+	else:
+		pass
+	

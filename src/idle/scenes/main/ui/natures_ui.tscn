@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://b0b34apd0siei"]
+
+[ext_resource type="Script" uid="uid://cwhch6xryy37v" path="res://scenes/main/ui/natures_ui.gd" id="1_f2jb3"]
+
+[sub_resource type="Theme" id="Theme_iexyc"]
+
+[node name="NaturesUI" type="Control" unique_id=554714860 node_paths=PackedStringArray("twigs_count_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f2jb3")
+twigs_count_label = NodePath("ScrollContainer/VBoxContainer/Item/HBoxContainer/MarginContainer/Count")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=537001099]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_iexyc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1550870481]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item" type="MarginContainer" parent="ScrollContainer/VBoxContainer" unique_id=1613741141]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Item" unique_id=1266303124]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item/HBoxContainer" unique_id=94264125]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="ScrollContainer/VBoxContainer/Item/HBoxContainer/MarginContainer" unique_id=338166721]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item/HBoxContainer" unique_id=1726321314]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Item/HBoxContainer/MarginContainer3" unique_id=1516121986]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Twigs"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item/HBoxContainer" unique_id=151686375]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="TwigsButton" type="Button" parent="ScrollContainer/VBoxContainer/Item/HBoxContainer/MarginContainer2" unique_id=150436179]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SPAWN: [1 MANA]"
+
+[node name="Item2" type="MarginContainer" parent="ScrollContainer/VBoxContainer" unique_id=361001969]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Item2" unique_id=581161456]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item2/HBoxContainer" unique_id=1726146190]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="ScrollContainer/VBoxContainer/Item2/HBoxContainer/MarginContainer" unique_id=858377046]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item2/HBoxContainer" unique_id=611919425]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Item2/HBoxContainer/MarginContainer3" unique_id=882174980]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pebbles"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item2/HBoxContainer" unique_id=1496233672]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="PebblesButton" type="Button" parent="ScrollContainer/VBoxContainer/Item2/HBoxContainer/MarginContainer2" unique_id=662227062]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SPAWN: [1 MANA]"
+
+[node name="Item3" type="MarginContainer" parent="ScrollContainer/VBoxContainer" unique_id=1406292892]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Item3" unique_id=1025778147]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item3/HBoxContainer" unique_id=2106295323]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Count" type="Label" parent="ScrollContainer/VBoxContainer/Item3/HBoxContainer/MarginContainer" unique_id=1761673313]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item3/HBoxContainer" unique_id=152569645]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Item3/HBoxContainer/MarginContainer3" unique_id=1706422742]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lights"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Item3/HBoxContainer" unique_id=936913915]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="LightsButton" type="Button" parent="ScrollContainer/VBoxContainer/Item3/HBoxContainer/MarginContainer2" unique_id=255790241]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SPAWN: [1 MANA]"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Item/HBoxContainer/MarginContainer2/TwigsButton" to="." method="_on_twigs_button_pressed"]

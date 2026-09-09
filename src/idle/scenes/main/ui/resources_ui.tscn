@@ -26,6 +26,14 @@ oxygenCountLabel = NodePath("MarginContainer/VBoxContainer/Oxygen/MarginContaine
 detritusCountLabel = NodePath("MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer/MarginContainer2/Count")
 foodCountLabel = NodePath("MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer/MarginContainer2/Count")
 
+[node name="TimerStandard" type="Timer" parent="." unique_id=2085774951]
+wait_time = 6.0
+
+[node name="TimerFast" type="Timer" parent="." unique_id=1314693701]
+
+[node name="TimerSlow" type="Timer" parent="." unique_id=620459880]
+wait_time = 60.0
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1285965466]
 layout_mode = 1
 anchors_preset = 15
@@ -551,14 +559,6 @@ theme_override_font_sizes/font_size = 24
 text = "0"
 horizontal_alignment = 2
 vertical_alignment = 1
-
-[node name="TimerStandard" type="Timer" parent="." unique_id=2085774951]
-wait_time = 6.0
-
-[node name="TimerFast" type="Timer" parent="." unique_id=1314693701]
-
-[node name="TimerSlow" type="Timer" parent="." unique_id=620459880]
-wait_time = 60.0
 
 [connection signal="timeout" from="TimerStandard" to="." method="_on_timer_standard_timeout"]
 [connection signal="timeout" from="TimerFast" to="." method="_on_timer_fast_timeout"]

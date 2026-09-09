@@ -1,11 +1,20 @@
 [gd_scene format=3 uid="uid://diy14gsbra5g7"]
 
-[ext_resource type="Texture2D" uid="uid://c8jlqcenegoh3" path="res://images/icons/icon.svg" id="1_yf13x"]
+[ext_resource type="Texture2D" uid="uid://uutfmwefb00t" path="res://images/backgrounds/puddle_draft1_discordcopy.png" id="1_3bqjm"]
 [ext_resource type="PackedScene" uid="uid://4xpsqr4idnwk" path="res://scenes/main/ui/resources_ui.tscn" id="2_wt2oo"]
+[ext_resource type="Script" uid="uid://bcneo8q8esjok" path="res://scenes/main/ui/spells.gd" id="3_3bqjm"]
+[ext_resource type="PackedScene" uid="uid://ct5ugw6kr6tup" path="res://scenes/main/ui/biotics_ui.tscn" id="3_pgpbf"]
+[ext_resource type="PackedScene" uid="uid://b0b34apd0siei" path="res://scenes/main/ui/natures_ui.tscn" id="4_3bqjm"]
 
-[sub_resource type="Theme" id="Theme_hufm4"]
+[sub_resource type="Gradient" id="Gradient_3bqjm"]
+offsets = PackedFloat32Array(0.19999999, 1)
+colors = PackedColorArray(0.31764707, 0.96862745, 1, 0.5254902, 0.1882353, 0.8862745, 0.7529412, 0.5058824)
+metadata/_snap_enabled = true
 
-[node name="main_ui" type="Control" unique_id=550820479]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hufm4"]
+gradient = SubResource("Gradient_3bqjm")
+
+[node name="MainUI" type="Control" unique_id=550820479]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,37 +30,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PondView" type="Control" parent="HBoxContainer" unique_id=1185230820]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Control" type="Control" parent="HBoxContainer/PondView" unique_id=1850461655]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Icon" type="Sprite2D" parent="HBoxContainer/PondView/Control" unique_id=1062439306]
-scale = Vector2(5, 5)
-texture = ExtResource("1_yf13x")
-
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1906774824]
-layout_mode = 2
-theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 0
-theme_override_constants/margin_bottom = 16
-
-[node name="VSeparator" type="VSeparator" parent="HBoxContainer/MarginContainer" unique_id=2083847174]
-layout_mode = 2
-
 [node name="MenuView" type="Control" parent="HBoxContainer" unique_id=1561209670]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="BackgroundColor" type="Sprite2D" parent="HBoxContainer/MenuView" unique_id=1622005516]
+z_index = -4096
+position = Vector2(393.49994, 449)
+scale = Vector2(12.828125, 14.125)
+texture = SubResource("GradientTexture2D_hufm4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MenuView" unique_id=373251754]
 layout_mode = 1
@@ -118,7 +105,7 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="Button" type="Button" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control/MarginContainer" unique_id=1818293880]
+[node name="BioticsButton" type="Button" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control/MarginContainer" unique_id=1818293880]
 layout_mode = 2
 text = "BIOTICS"
 
@@ -138,9 +125,9 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 32
 
-[node name="Button" type="Button" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control2/MarginContainer" unique_id=772950739]
+[node name="NaturesButton" type="Button" parent="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control2/MarginContainer" unique_id=772950739]
 layout_mode = 2
-text = "STATICS"
+text = "NATURES"
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MenuView/HBoxContainer" unique_id=2093674761]
 layout_mode = 2
@@ -152,32 +139,51 @@ theme_override_constants/margin_bottom = 320
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer/MenuView/HBoxContainer/MarginContainer" unique_id=1926148392]
 layout_mode = 2
 
-[node name="Spells" type="Control" parent="HBoxContainer/MenuView/HBoxContainer" unique_id=581562727]
+[node name="Spells" type="Control" parent="HBoxContainer/MenuView/HBoxContainer" unique_id=581562727 node_paths=PackedStringArray("biotics_ui", "natures_ui")]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("3_3bqjm")
+biotics_ui = NodePath("BioticsUI")
+natures_ui = NodePath("NaturesUI")
+
+[node name="BioticsUI" parent="HBoxContainer/MenuView/HBoxContainer/Spells" unique_id=554714860 instance=ExtResource("3_pgpbf")]
+layout_mode = 1
+
+[node name="NaturesUI" parent="HBoxContainer/MenuView/HBoxContainer/Spells" unique_id=1997175771 instance=ExtResource("4_3bqjm")]
+visible = false
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1906774824]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 16
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/MarginContainer" unique_id=2083847174]
+layout_mode = 2
+
+[node name="PondView" type="Control" parent="HBoxContainer" unique_id=1185230820]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/MenuView/HBoxContainer/Spells" unique_id=295643593]
+[node name="Control" type="Control" parent="HBoxContainer/PondView" unique_id=1850461655]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_hufm4")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MenuView/HBoxContainer/Spells/ScrollContainer" unique_id=2022612631]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="PuddleDraft1Discordcopy" type="Sprite2D" parent="HBoxContainer/PondView/Control" unique_id=1475970263]
+z_index = -1001
+position = Vector2(0.49995595, 2.3126602e-05)
+scale = Vector2(0.47916663, 0.8388889)
+texture = ExtResource("1_3bqjm")
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MenuView/HBoxContainer/Spells/ScrollContainer/VBoxContainer" unique_id=1229780551]
-layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-
-[node name="Label" type="Label" parent="HBoxContainer/MenuView/HBoxContainer/Spells/ScrollContainer/VBoxContainer/MarginContainer" unique_id=1112806890]
-layout_mode = 2
-text = "Scroll Bar of Spells"
-horizontal_alignment = 1
-vertical_alignment = 1
+[connection signal="twig_purchased" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" to="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" method="_on_resources_ui_twig_purchased"]
+[connection signal="pressed" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control/MarginContainer/BioticsButton" to="HBoxContainer/MenuView/HBoxContainer/Spells" method="_on_biotics_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/SpellTabs/VBoxContainer/Control2/MarginContainer/NaturesButton" to="HBoxContainer/MenuView/HBoxContainer/Spells" method="_on_natures_button_pressed"]
+[connection signal="twigs_button_pressed" from="HBoxContainer/MenuView/HBoxContainer/Spells/NaturesUI" to="HBoxContainer/MenuView/HBoxContainer/Menus/VBoxContainer/Resources/ResourcesUI" method="_on_natures_ui_twigs_button_pressed"]
