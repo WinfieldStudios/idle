@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ct5ugw6kr6tup"]
 
-[ext_resource type="Script" uid="uid://cawoytu8y683w" path="res://scenes/main/ui/biotics_ui.gd" id="1_q4hko"]
+[ext_resource type="Script" uid="uid://cawoytu8y683w" path="res://scenes/main/ui/organisms_ui.gd" id="1_q4hko"]
 
 [sub_resource type="Theme" id="Theme_iexyc"]
 
-[node name="BioticsUI" type="Control" unique_id=554714860 node_paths=PackedStringArray("algae_count_label", "mold_count_label", "critters_count_label")]
+[node name="OrganismsUI" type="Control" unique_id=554714860 node_paths=PackedStringArray("algae_count_label", "mold_count_label", "critters_count_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
