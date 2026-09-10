@@ -4,8 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://daxycrctaveog" path="res://images/icons/arcana.png" id="1_ut5qv"]
 [ext_resource type="Texture2D" uid="uid://b2guqfmyshrbi" path="res://images/icons/sun.png" id="2_xmyee"]
 [ext_resource type="Texture2D" uid="uid://uxnc3dj547vh" path="res://images/icons/oxygen.png" id="3_bewq2"]
-[ext_resource type="Texture2D" uid="uid://c5hnjar41yvam" path="res://images/icons/moon.png" id="4_nagar"]
 [ext_resource type="Texture2D" uid="uid://c4jlhikaffmmj" path="res://images/icons/detritus.png" id="5_b2m0v"]
+[ext_resource type="Texture2D" uid="uid://2bdrb0ov3dtn" path="res://images/icons/crbnicn.png" id="5_est24"]
+[ext_resource type="Texture2D" uid="uid://cbselt3iwd0ye" path="res://images/icons/foodicon.png" id="8_6iojs"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nagar"]
+load_path = "res://.godot/imported/N2 icon.png-7e77622e5553b7d44baebfd82e6018b0.ctex"
 
 [node name="ResourcesUI" type="Control" unique_id=1844071280 node_paths=PackedStringArray("timerStandard", "timerFast", "timerSlow", "arcanaCountLabel", "sunlightCountLabel", "nitrogenCountLabel", "carbonCountLabel", "oxygenCountLabel", "detritusCountLabel", "foodCountLabel")]
 layout_mode = 3
@@ -233,7 +237,7 @@ grow_vertical = 2
 
 [node name="Nitrogen" type="Sprite2D" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer/Icon/Control" unique_id=1606666316]
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("4_nagar")
+texture = SubResource("CompressedTexture2D_nagar")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer" unique_id=757785014]
 layout_mode = 2
@@ -306,7 +310,7 @@ grow_vertical = 2
 
 [node name="Carbon" type="Sprite2D" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer/Icon/Control" unique_id=1277305510]
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("3_bewq2")
+texture = ExtResource("5_est24")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer" unique_id=661601511]
 layout_mode = 2
@@ -525,7 +529,7 @@ grow_vertical = 2
 
 [node name="Food" type="Sprite2D" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer/Icon/Control" unique_id=1651066941]
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("5_b2m0v")
+texture = ExtResource("8_6iojs")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer" unique_id=1557565541]
 layout_mode = 2
