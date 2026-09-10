@@ -69,24 +69,28 @@ func _on_resources_ui_spawned_organisms_critters() -> void:
 
 
 func _on_resources_ui_depleted_sunlight(subtrahend) -> void:
-	print("debug")
+	print("Sunlight")
 
 
 func _on_resources_ui_depleted_oxygen(subtrahend) -> void:
-	print("debug")
+	print("Oxygen")
 
 
 func _on_resources_ui_depleted_nitrogen(subtrahend) -> void:
-	print("debug")
+	print("Nitrogen")
 
 
 func _on_resources_ui_depleted_food(subtrahend) -> void:
-	print("debug")
+	print("Food")
 
 
 func _on_resources_ui_depleted_detritus(subtrahend) -> void:
-	print("debug")
+	print("Detritus")
 
 
-func _on_resources_ui_depleted_co_2() -> void:
-	print("debug")
+func _on_resources_ui_depleted_carbon(subtrahend) -> void:
+	print("Carbon")
+
+
+func _on_resources_ui_depleted_arcana() -> void:
+	pass # Replace with function body.

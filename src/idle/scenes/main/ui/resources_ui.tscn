@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c5hnjar41yvam" path="res://images/icons/moon.png" id="4_nagar"]
 [ext_resource type="Texture2D" uid="uid://c4jlhikaffmmj" path="res://images/icons/detritus.png" id="5_b2m0v"]
 
-[node name="ResourcesUI" type="Control" unique_id=1844071280 node_paths=PackedStringArray("timerStandard", "timerFast", "timerSlow", "arcanaCountLabel", "sunlightCountLabel", "nitrogenCountLabel", "co2CountLabel", "oxygenCountLabel", "detritusCountLabel", "foodCountLabel")]
+[node name="ResourcesUI" type="Control" unique_id=1844071280 node_paths=PackedStringArray("timerStandard", "timerFast", "timerSlow", "arcanaCountLabel", "sunlightCountLabel", "nitrogenCountLabel", "carbonCountLabel", "oxygenCountLabel", "detritusCountLabel", "foodCountLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,7 @@ timerSlow = NodePath("TimerSlow")
 arcanaCountLabel = NodePath("MarginContainer/VBoxContainer/Arcana/MarginContainer/HBoxContainer/MarginContainer2/Count")
 sunlightCountLabel = NodePath("MarginContainer/VBoxContainer/Sunlight/MarginContainer/HBoxContainer/MarginContainer2/Count")
 nitrogenCountLabel = NodePath("MarginContainer/VBoxContainer/Nitrogen/MarginContainer/HBoxContainer/MarginContainer2/Count")
-co2CountLabel = NodePath("MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/MarginContainer2/Count")
+carbonCountLabel = NodePath("MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer/MarginContainer2/Count")
 oxygenCountLabel = NodePath("MarginContainer/VBoxContainer/Oxygen/MarginContainer/HBoxContainer/MarginContainer2/Count")
 detritusCountLabel = NodePath("MarginContainer/VBoxContainer/Detritus/MarginContainer/HBoxContainer/MarginContainer2/Count")
 foodCountLabel = NodePath("MarginContainer/VBoxContainer/Food/MarginContainer/HBoxContainer/MarginContainer2/Count")
@@ -268,11 +268,11 @@ text = "0"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="CO2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=52549002]
+[node name="Carbon" type="Control" parent="MarginContainer/VBoxContainer" unique_id=52549002]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/CO2" unique_id=922588720]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Carbon" unique_id=922588720]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -285,16 +285,16 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CO2/MarginContainer" unique_id=976432511]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer" unique_id=976432511]
 layout_mode = 2
 
-[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer" unique_id=753933672]
+[node name="Icon" type="Control" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer" unique_id=753933672]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/Icon" unique_id=661180134]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer/Icon" unique_id=661180134]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -304,11 +304,11 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CO2" type="Sprite2D" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/Icon/Control" unique_id=1277305510]
+[node name="Carbon" type="Sprite2D" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer/Icon/Control" unique_id=1277305510]
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_bewq2")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer" unique_id=661601511]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer" unique_id=661601511]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 4
@@ -316,15 +316,15 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/MarginContainer" unique_id=421558318]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer/MarginContainer" unique_id=421558318]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 24
-text = "CO2"
+text = "Carbon"
 vertical_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer" unique_id=1811765267]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer" unique_id=1811765267]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 4
@@ -332,7 +332,7 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/CO2/MarginContainer/HBoxContainer/MarginContainer2" unique_id=649766516]
+[node name="Count" type="Label" parent="MarginContainer/VBoxContainer/Carbon/MarginContainer/HBoxContainer/MarginContainer2" unique_id=649766516]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
